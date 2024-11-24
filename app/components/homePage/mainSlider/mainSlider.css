@@ -1,0 +1,15 @@
+.main-slider .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  text-align: center;
+  line-height: 20px;
+  font-size: 12px;
+  color: #000;
+  opacity: 1;
+  background: #d9d9d9;
+}
+
+.main-slider .swiper-pagination-bullet-active {
+  color: #fff;
+  background: #f97316;
+}
