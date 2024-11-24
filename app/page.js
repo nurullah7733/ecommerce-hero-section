@@ -169,17 +169,27 @@ export const categories = [
   },
 ];
 
-const Home = () => {
+const Home = async () => {
+  let res = await fetch(
+    "https://api.shope.com.bd/api/v1/public/hero-categories",
+    { cache: "force-cache", next: { revalidate: 3600 } }
+  );
+  if (!res.ok) {
+    throw new Error("Failed to fetch categories data");
+  }
+  let categories1 = await res.json();
+
   return (
     <div>
-      <div className="relative h-screen">
+      <div className="relative">
         {/* Categories section */}
-        <div className="absolute -top-[1px] w-full z-10">
-          <div className="container mx-auto">
-            <Categories categories={categories} />
+        <div
+          className={`absolute top-0 left-0 w-full z-20 pointer-events-none`}
+        >
+          <div className="container mx-auto ">
+            <Categories categories={categories1} />
           </div>
         </div>
-
         {/* Main slider */}
         <MainSlider />
       </div>

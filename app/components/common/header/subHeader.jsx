@@ -7,7 +7,7 @@ const SubHeader = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState("Bangla");
 
-  const options = ["English", "Bangla", "Urdu"];
+  const options = ["English", "Bangla", "Hindi", "Urdu"];
 
   const handleToggle = () => {
     setIsOpen(!isOpen);
