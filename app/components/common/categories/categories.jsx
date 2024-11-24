@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import CategoryItem from "./CategoryItem";
+import CategoryItem from "./categoryItem";
 
 const Categories = ({ categories }) => {
   // console.log(categories, "categories");
