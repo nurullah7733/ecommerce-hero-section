@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import CategoryItem from "./categoryItem";
 
 const Categories = ({ categories }) => {
-  // console.log(categories, "categories");
+  console.log(categories, "categories");
 
   const [activeCategories, setActiveCategories] = useState([]);
 
